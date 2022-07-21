@@ -8,6 +8,10 @@ pub fn calc(x: i32, y: i32, op: &str) -> i32 {
     }
 }
 
+pub fn factorial(x: i64) -> i64 {
+    if x <= 1 { 1 } else { x * factorial(x - 1) }
+}
+
 #[cfg(test)]
 mod tests {
     use super::calc;
@@ -15,7 +19,6 @@ mod tests {
     #[test]
     fn it_can_add() {
         assert_eq!(calc(5, 6, "+"), 11);
-        assert_eq!(calc(1, 1, "+"), 2);
     }
 
     #[test]
