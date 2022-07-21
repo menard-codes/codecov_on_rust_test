@@ -15,6 +15,7 @@ mod tests {
     #[test]
     fn it_can_add() {
         assert_eq!(calc(5, 6, "+"), 11);
+        assert_eq!(calc(1, 1, "+"), 2);
     }
 
     #[test]
