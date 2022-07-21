@@ -15,6 +15,7 @@ pub fn factorial(x: i64) -> i64 {
 #[cfg(test)]
 mod tests {
     use super::calc;
+    use super::factorial;
 
     #[test]
     fn it_can_add() {
@@ -40,5 +41,10 @@ mod tests {
     #[should_panic]
     fn it_panics_with_unknown_operator() {
         calc(4, 5, "%");
+    }
+
+    #[test]
+    fn it_calculates_factorial() {
+        assert_eq!(factorial(5), 120);
     }
 }
